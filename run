@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ $# == 1 ];
+  then
+    make flash ESPPORT=$1
+    make simple_monitor ESPPORT=$1
+  else
+    make flash
+    make simple_monitor
+  fi
